@@ -1,0 +1,272 @@
+# 📄 Software Requirements Specification (SRS)  
+## Amane: A Safe Space to Report, Heal, and Connect  
+*Version 1.0*  
+*Prepared for: [Your University/Program Name]*  
+*Prepared by: [Your Team Name]*  
+*Date: [Current Date]*
+
+---
+
+## 1. Introduction
+
+### 1.1 Purpose
+This document outlines the functional and non-functional requirements for Amane, a web-based platform designed to support survivors of violence, abuse, and bullying in Ethiopia. Amane provides integrated tools for anonymous reporting, counseling, community engagement, legal aid tracking, and career support — all within a culturally sensitive, trauma-informed, and privacy-first environment.
+
+This SRS serves as a foundation for design, development, testing, and stakeholder alignment.
+
+### 1.2 Scope
+Amane is a Progressive Web Application (PWA) accessible via desktop and mobile browsers. It targets:
+- Survivors of gender-based violence (GBV), domestic abuse, bullying, and harassment
+- Children, women, and men across urban and rural Ethiopia
+- Caregivers, legal advocates, mental health professionals, and NGOs
+
+Included Features:
+- Anonymous incident reporting with smart triage
+- Case tracking dashboard (“My Journey”)
+- Secure counseling & mentorship matching
+- Verified resource directory with interactive map
+- Community forums (“Safe Circles”)
+- Storytelling hub (text/audio/illustration)
+- Event calendar for healing workshops
+- Job portal for ethical employment
+- Wellness tools (breathing, affirmations)
+- Multilingual support (Amharic, Oromo, Tigrinya, English)
+
+Excluded:
+- Mobile app (native iOS/Android) — though PWA works on phones
+- Real-time emergency dispatch (e.g., automatic police alert)
+- Financial transactions or payment processing
+
+### 1.3 Definitions, Acronyms, and Abbreviations
+
+| Term | Definition |
+|------|-----------|
+| GBV | Gender-Based Violence |
+| PWA | Progressive Web Application |
+| UI | User Interface |
+| UX | User Experience |
+| NGO | Non-Governmental Organization |
+| Amane | Amharic for “Peace” or “Safety” — project name |
+| Selamta | Sister platform for women-focused support (“Welcome” in Amharic) |
+
+### 1.4 References
+- WHO Ethiopia GBV Report (2023)  
+- Ethiopian Family Law (Proclamation No. 213/2000)  
+- IEEE Std 830-1998: Recommended Practice for SRS  
+- WCAG 2.1 Accessibility Guidelines
+
+### 1.5 Overview
+Section 2 describes the product perspective and user characteristics.  
+Section 3 details functional requirements.  
+Section 4 covers non-functional requirements.  
+Section 5 outlines use cases and system architecture.
+
+---
+
+## 2. Overall Description
+
+### 2.1 Product Perspective
+Amane is a standalone web application but designed to interoperate with its sister platform Selamta (for women-specific services). Both share:
+- A common backend API
+- Resource database (shelters, legal aid, counselors)
+- Authentication layer (optional)
+
+Amane does not depend on third-party platforms for core functionality but may integrate with:
+- SMS gateways (for crisis alerts)
+- OpenStreetMap (for location services)
+- Jitsi Meet (for video counseling)
+
+### 2.2 User Classes and Characteristics
+
+| User Class | Description | Needs |
+|-----------|-------------|-------|
+| Survivor | Person experiencing abuse/violence | Anonymous reporting, emotional support, safety planning |
+| Caregiver | Parent/guardian of a child survivor | Guardian reporting, child safety resources |
+| Counselor/Advocate | Trained professional (NGO, volunteer) | Case management, secure communication |
+| NGO Admin | Staff managing resources/events | Verify listings, post events, view anonymized analytics |
+| Job Provider | Ethical employer in social sector | Post vetted job openings |
+| General Public | Ally or awareness seeker | Read stories, attend events, learn about GBV |
+
+### 2.3 Operating Environment
+- Browsers: Chrome, Firefox, Safari, Edge (latest 2 versions)
+- Devices: Desktop, laptop, tablet, smartphone
+- Internet: Works on low-bandwidth; core features available offline via PWA caching
+- Languages: Amharic (primary), Oromo, Tigrinya, English
+
+### 2.4 Design and Implementation Constraints
+- Must comply with Ethiopian data privacy norms (no explicit law, but follow GDPR principles)
+- No persistent tracking (cookies, analytics) without explicit consent
+- All user data must be encrypted at rest and in transit
+- Must support offline use for key features (reporting draft, emergency contacts)
+
+### 2.5 Assumptions and Dependencies
+- Users have access to basic internet (even if intermittent)
+- Partner NGOs will verify resource listings (shelters, legal aid)
+- Voice/audio features assume device has microphone/speaker
+- SMS integration depends on local telecom partnerships (optional in v1)
+
+---
+
+## 3. Functional Requirements
+
+### 3.1 User Management (Optional)
+| ID | Requirement | Priority |
+|----|------------|----------|
+| FR-01 | The system shall allow users to use the platform without creating an account. | High |
+| FR-02 | The system shall allow optional account creation for caregivers or advocates. | Medium |
+| FR-03 | The system shall support login via email or phone (if account created). | Medium |
+
+### 3.2 Incident Reporting
+| ID | Requirement | Priority |
+|----|------------|----------|
+| FR-04 | The system shall provide a smart reporting form that guides users through context-aware questions (type of abuse, perpetrator, location). | High |
+| FR-05 | The system shall allow anonymous submission with zero IP or device logging. | Critical |
+| FR-06 | The system shall support uploading text, images, or audio (max 10MB). | Medium |
+| FR-07 | The system shall auto-translate the form into the user’s selected language. | High |
+| FR-08 | The system shall allow saving a draft locally (browser storage). | Medium |
+
+### 3.3 Case Tracking & Dashboard
+| ID | Requirement | Priority |
+|----|------------|----------|
+| FR-09 | The system shall generate a unique, anonymous Case ID upon submission. | High |
+| FR-10 | The system shall display a visual “My Journey” timeline showing report status, counselor assignment, and next steps. | High |
+| FR-11 | The system shall allow exporting the case timeline as a PDF. | Medium |
+
+### 3.4 Counseling & Support
+| ID | Requirement | Priority |
+|----|------------|----------|
+| FR-12 | The system shall match users with available counselors based on language, gender preference, and expertise. | High |
+| FR-13 | The system shall provide secure text and video chat (via embedded Jitsi). | High |
+| FR-14 | The system shall auto-delete chat logs after 7 days unless user opts to save. | Critical |
+
+### 3.5 Resource Directory & Map
+| ID | Requirement | Priority |
+|----|------------|----------|
+| FR-15 | The system shall display a filterable map of verified resources (shelters, legal aid, hospitals). | High |
+| FR-16 | The system shall show transport instructions (e.g., “Take blue minibus from Meskel Square”). | Medium |
+| FR-17 | The system shall allow NGOs to submit and verify new resources via admin panel. | Medium |
+
+### 3.6 Community & Storytelling
+| ID | Requirement | Priority |
+|----|------------|----------|
+| FR-18 | The system shall allow users to submit stories via text, voice, or drawing. | Medium |
+| FR-19 | The system shall host private forums (“Safe Circles”) moderated by trained volunteers. | High |
+| FR-20 | The system shall allow emoji-only reactions (no open comments) to reduce conflict. | Medium |
+
+### 3.7 Events & Jobs
+| ID | Requirement | Priority |
+|----|------------|----------|
+| FR-21 | The system shall allow NGOs to post healing events (in-person/virtual) with RSVP. | Medium |
+| FR-22 | The system shall host a job portal for ethical employers in social sectors. | Medium |
+| FR-23 | The system shall require job posters to agree to a code of ethics (trauma-informed, non-discriminatory). | Medium |
+
+### 3.8 Safety & Privacy
+| ID | Requirement | Priority |
+|----|------------|----------|
+| FR-24 | The system shall include a “Panic Mode” button that clears session data and redirects to a fake page (e.g., government website). | Critical |
+| FR-25 | The system shall work offline for core features (emergency contacts, breathing exercises). | High |
+| FR-26 | The system shall not store user data unless explicitly consented. | Critical |
+
+---
+
+## 4. Non-Functional Requirements
+
+### 4.1 Performance
+- Page load time < 3s on 3G connection
+- Form submission < 2s with stable internet
+- Offline features available within 1s
+
+### 4.2 Security
+- All data encrypted in transit (TLS 1.3+) and at rest (AES-256)
+- No persistent cookies or trackers
+- Regular security audits (OWASP Top 10 compliance)
+
+### 4.3 Usability
+- WCAG 2.1 AA compliant (contrast, keyboard nav, screen reader support)
+- Literacy-friendly: icons + audio support for low-literacy users
+- Language switcher always visible
+
+### 4.4 Reliability
+- 99% uptime for core services
+- Auto-save drafts every 30 seconds
+- Graceful degradation during network loss
+
+### 4.5 Maintainability
+- Modular codebase (Next.js + REST API)
+- Comprehensive logging (anonymized)
+- Easy to add new languages or regions
+
+---
+
+## 5. Use Cases
+
+### UC-01: Report an Incident Anonymously
+- Actor: Survivor
+- Precondition: User accesses homepage
+- Flow:
+  1. Clicks “Report Abuse”
+  2. Selects language
+  3. Completes smart form
+  4. Submits anonymously
+  5. Receives Case ID
+- Postcondition: Report stored in encrypted database
+
+### UC-02: Connect with a Counselor
+- Actor: Survivor
+- Precondition: Report submitted or direct access
+- Flow:
+  1. Clicks “Talk to Someone”
+  2. Answers 3 matching questions
+  3. Waits for available advocate
+  4. Starts secure chat/video
+- Postcondition: Session logged (auto-delete in 7 days)
+
+### UC-03: Find a Shelter
+- Actor: Survivor or Caregiver
+- Precondition: Internet access
+- Flow:
+  1. Clicks “Find Help Near Me”
+  2. Filters by “Shelter” + “Amharic”
+  3. Views map pin with directions
+  4. Calls or saves contact
+- Postcondition: Resource accessed
+
+---
+
+## 6. System Architecture (High-Level)
+[User Browser]  
+       ↓ (HTTPS)  
+[Next.js Frontend (Vercel)]  
+       ↓ (API Calls)  
+[Node.js/Django Backend (Render)]  
+       ↓  
+[PostgreSQL Database]  
+       ↓  
+[Cloud Storage (for uploads)]  
+       ↓  
+[Optional: SMS Gateway, Jitsi, OpenStreetMap]
+
+- Frontend: Next.js (PWA, SSR, i18n)
+- Backend: RESTful API with role-based access control
+- Database: PostgreSQL with encrypted fields
+- Auth: Firebase Auth (optional)
+- Offline: Workbox service workers
+
+---
+
+## 7. Appendices
+
+### Appendix A: Priority Legend
+- Critical: Must have for safety/legal compliance  
+- High: Core to user mission  
+- Medium: Enhances experience but not essential  
+- Low: Nice-to-have (future phases)
+
+### Appendix B: Glossary
+- Trauma-Informed: Approach that recognizes impact of trauma and avoids re-traumatization  
+- PWA: Web app that works offline, installable, fast  
+- Zero-Trace: Leaves no digital footprint on user device
+
+---
+
+> ✅ End of SRS Document
