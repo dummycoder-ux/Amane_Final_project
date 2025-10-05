@@ -1,0 +1,42 @@
+# 🎨 UI Design System for Amane & Selamta
+
+## 🖼️ Key Pages (11 Total)
+1. Homepage
+2. Reporting Portal
+3. My Journey Dashboard
+4. Resource Map
+5. Community Circles
+6. Storytelling Hub
+7. Events Calendar
+8. Job Portal
+9. Wellness Corner
+10. About / Contact
+11. Admin Panel
+
+## 🎨 Color Palette
+
+| Role | Color | Hex Code |
+|------|-------|----------|
+| Primary Brand | Soft Navy Blue | #4A6FA5 |
+| Secondary Accent | Dusty Rose | #E8B4B8 |
+| Background | Cream | #F9F7F5 |
+| Highlight | Warm Gold | #FFD700 |
+| Text | Dark Gray | #333333 |
+| Alert | Soft Red | #E57373 |
+| Calm | Sage Green | #81C784 |
+
+## 🔤 Font Pairing
+
+| Use Case | Font | Fallback |
+|----------|------|----------|
+| Headings | Playfair Display | Georgia, serif |
+| Body Text | Open Sans | Arial, sans-serif |
+| Multilingual | Noto Sans | Helvetica, sans-serif |
+
+## 🧭 UI Principles
+- Empathy First
+- Privacy by Default
+- Cultural Relevance
+- Accessibility (WCAG AA)
+- Offline Resilience
+- Progressive Disclosure
