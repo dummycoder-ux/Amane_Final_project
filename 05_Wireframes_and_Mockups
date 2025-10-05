@@ -1,0 +1,36 @@
+# 🖋️ Wireframe & Mockup Descriptions
+
+## 🏠 Homepage Mockup
+- Hero banner: “Amane: A Safe Space to Report, Heal, and Connect”
+- Floating red “Panic Mode” button (top-right corner)
+- 3 quick paths: “Report Now”, “Talk to Someone”, “Find Help Near Me”
+- Language switcher (bottom-left)
+- Footer: “Built with love for Ethiopian survivors”
+
+## 📝 Reporting Portal Wireframe
+- Step-by-step form:
+  1. “What happened?” → dropdown
+  2. “Who was involved?” → auto-suggest
+  3. “Do you need immediate help?” → triggers Panic Mode
+- Upload options: photo, audio, text
+- Save Draft button (local storage)
+
+## 🌳 My Healing Tree Dashboard
+- Central tree graphic — grows leaves as user completes milestones
+- Milestones: “First Report”, “Connected to Counselor”, “Attended Event”
+- Export as printable poster: “I am growing stronger every day.”
+
+## 🗺️ Resource Map Mockup
+- Interactive map of Ethiopia
+- Filters: Type (Legal/Counseling/Shelter), Language, Accessibility
+- Each pin shows: Verified badge, rating, transport tips
+- Click pin → opens modal with contact info + directions
+
+## 🧘 Wellness Corner Mockup
+- Floating “Breathe” button (always visible)
+- Modal with:
+  - Guided breathing (Amharic audio)
+  - Nature sounds (Simien Mountains, Blue Nile Falls)
+  - Affirmation cards (“You are safe. You are not alone.”)
+
+> 💡 Use Figma to build these mockups. I can generate a Figma link if needed!
