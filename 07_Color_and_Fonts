@@ -1,0 +1,33 @@
+# 🎨 Color Palette & Font Pairings
+
+## 🎨 Color Codes (Hex)
+
+Primary Brand: #4A6FA5  
+Secondary Accent: #E8B4B8  
+Background: #F9F7F5  
+Highlight: #FFD700  
+Text: #333333  
+Alert: #E57373  
+Calm: #81C784
+
+## 🔤 Font Pairings
+
+### Headings
+- Playfair Display (Serif) — elegant, trustworthy
+- Fallback: Georgia, serif
+
+### Body Text
+- Open Sans — clean, friendly, highly readable
+- Fallback: Arial, sans-serif
+
+### Multilingual Support
+- Noto Sans — excellent for Amharic, Oromo, Tigrinya
+- Fallback: Helvetica, sans-serif
+
+## 🖋️ UI Copy Tone
+> “You don’t have to face this alone.”  
+> “Your story matters — share it when you’re ready.”  
+> “We’re here to listen, not judge.”  
+> “This is your space. Take your time.”
+
+> Use warm, supportive, non-judgmental language — avoid clinical terms like “victim” unless user chooses it.
