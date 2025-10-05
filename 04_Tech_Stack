@@ -1,0 +1,35 @@
+# 🛠️ Tech Stack for Amane & Selamta (Web App)
+
+## 🌐 Frontend
+- Framework: Next.js (React-based, SSR, PWA-ready)
+- Styling: Tailwind CSS (responsive, utility-first)
+- State Management: Zustand or Context API
+- Routing: Next.js App Router
+- Icons: Lucide.dev (lightweight, SVG)
+
+## 🖥️ Backend
+- Server: Node.js + Express or Django (Python)
+- Database: PostgreSQL (relational) or MongoDB (NoSQL)
+- Auth: Firebase Auth or OAuth2 (optional)
+- File Storage: Cloudinary or Supabase Storage
+- Realtime: Socket.io or Firebase Realtime DB
+
+## 📱 Mobile/Web Compatibility
+- Responsive design with Flexbox/Grid
+- PWA via Workbox (offline caching)
+- Browser compatibility: Chrome, Firefox, Safari, Edge
+
+## 🌍 Localization
+- i18n: next-i18next (for multilingual support)
+- Translations: Amharic, Oromo, Tigrinya, English
+- Cultural notes in translations
+
+## 🚀 Hosting & Deployment
+- Frontend: Vercel (free tier, automatic deployments)
+- Backend: Render or Railway (free tiers available)
+- Domain: Custom domain (e.g., amane.et or selamta.et)
+
+## 🧪 Testing & QA
+- Unit Tests: Jest + React Testing Library
+- E2E: Cypress or Playwright
+- Accessibility: axe-core, Lighthouse
